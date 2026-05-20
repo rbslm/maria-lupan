@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+  font-family: "Space Mono", monospace;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 300;
+  font-size: 9vw;
+  text-align: center;
+  width: max-content;
+}
+
+.corner {
+  position: fixed;
+  color: white;
+  font-size: clamp(0.6rem, 1.2vw, 0.85rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 300;
+}
+
+a.corner:hover {
+  text-decoration: underline;
+}
+
+.top-left {
+  top: 1rem;
+  left: 1rem;
+}
+
+.top-center {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-right {
+  top: 1rem;
+  right: 1rem;
+}
+
+.bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.bottom-center {
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 400;
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 400;
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 500;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.loader-count {
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
