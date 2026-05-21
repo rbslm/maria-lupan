@@ -8,7 +8,7 @@
 body {
   background: #000;
   overflow: hidden;
-  font-family: "Space Mono", monospace;
+  font-family: "Funnel Display", monospace;
 }
 
 .scroll-container {
@@ -49,7 +49,7 @@ body {
   text-transform: uppercase;
   pointer-events: none;
   z-index: 300;
-  font-size: 9vw;
+  font-size: 10vw;
   text-align: center;
   width: max-content;
 }

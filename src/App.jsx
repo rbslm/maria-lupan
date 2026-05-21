@@ -94,19 +94,16 @@ export default function App() {
     const el = scrollRef.current;
     if (!el) return;
 
-    // Start at first real slide (index 1, skipping the prepended clone)
     el.scrollTop = el.clientHeight;
 
     const handleScrollEnd = () => {
       const tolerance = 5;
       const lastCloneTop = (loopedImages.length - 1) * el.clientHeight;
 
-      // At end clone → jump to first real slide
       if (Math.abs(el.scrollTop - lastCloneTop) <= tolerance) {
         el.scrollTo({ top: el.clientHeight, behavior: "instant" });
       }
 
-      // At beginning clone → jump to last real slide
       if (el.scrollTop <= tolerance) {
         el.scrollTo({
           top: lastCloneTop - el.clientHeight,
@@ -132,7 +129,7 @@ export default function App() {
       <div className="cursor-ring" />
 
       <a
-        href="https://www.instagram.com/matreding"
+        href="https://www.instagram.com/masha.looo"
         target="_blank"
         rel="noreferrer"
         className="corner top-left"
@@ -140,7 +137,7 @@ export default function App() {
         Instagram
       </a>
       <a
-        href="https://unsplash.com/@matreding?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn_COrY9a61nS7ohmi5Hq5DmZajVA3IdJQ1gaEpXiiSnLVFJ9IyxmrGhW9ER8_aem_khaFveROIH2fMtEm_BISAQ"
+        href="https://unsplash.com/@luandmario"
         target="_blank"
         rel="noreferrer"
         className="corner top-center"
@@ -149,20 +146,20 @@ export default function App() {
       </a>
 
       <a
-        href="https://www.paypal.com/donate?business=contact%40matreding.com&item_name=Mathias+Reding+-+Unsplash&currency_code=USD"
+        href="https://www.behance.net/maria_lupan"
         target="_blank"
         rel="noreferrer"
         className="corner top-right"
       >
-        Support Me
+        Behance
       </a>
 
-      <span className="corner bottom-left">French Photographer</span>
-      <span className="corner bottom-center">Based in Canada</span>
-      <span className="corner bottom-right">Sport & Reportage</span>
+      <span className="corner bottom-left">Designer</span>
+      <span className="corner bottom-center">Illustrator</span>
+      <span className="corner bottom-right">Photographer</span>
 
       <div className="title" ref={titleRef}>
-        MATHIAS REDING
+        Maria Lupan
       </div>
 
       <div className="scroll-container" ref={scrollRef}>
